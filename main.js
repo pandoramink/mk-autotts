@@ -192,8 +192,8 @@ function sendSetupMessage(voiceName, emotion, pacing, persona, pitch, naturalPau
 }
 
 function splitTextIntoChunks(text) {
-    // Split by sentence endings (., !, ?) or newlines, keeping the punctuation
-    const regex = /[^.!?\n]+[.!?\n]+/g;
+    // Split by sentence endings (., !, ?, Burmese ။, Burmese ၊) or newlines, keeping the punctuation
+    const regex = /[^.!?\n။၊]+[.!?\n။၊]+/g;
     let chunks = text.match(regex);
     if (!chunks) {
         chunks = [text];
